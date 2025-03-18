@@ -1,7 +1,7 @@
 import Input from './Input';
-import styled from "styled-components";
 import { useState } from "react";
 import { booksData } from "../data/booksData.js";
+import styled from "styled-components";
 
 const SearchContainer = styled.section`
     width: 100%;

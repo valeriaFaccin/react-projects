@@ -1,8 +1,8 @@
-import { newBooksReleases } from '../data/booksData';
 import Title from './Title';
 import cover from '../img/livro2.png';
-import styled from 'styled-components';
 import RecommendationCard from "./RecommendationCard";
+import { newBooksReleases } from '../data/booksData';
+import styled from 'styled-components';
 
 const ReleasesContainer = styled.section`
     background-color: #EBECEE;
