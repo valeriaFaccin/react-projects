@@ -4,7 +4,7 @@ export const booksData = [
     {id: 1, name: 'The Way of Kings', src: bookCover},
     {id: 2, name: 'Words of Radiance', src: bookCover},
     {id: 3, name: 'Oathbringer', src: bookCover},
-    {id: 4, name: 'Rythm of War', src: bookCover},
+    {id: 4, name: 'Rhythm of War', src: bookCover},
     {id: 5, name: 'Words Wind and Truth', src: bookCover}
 ];
 

@@ -18,7 +18,7 @@ const MenuOptions = styled.li`
     min-width: 120px;
 `;
 
-const menuOptions = ['categorias', 'favoritos', 'minha estante'];
+const menuOptions = ['categorias', 'favorites', 'minha estante'];
 
 function OptionsMenu() {
     return (

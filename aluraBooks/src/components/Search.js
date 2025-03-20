@@ -1,7 +1,8 @@
 import Input from './Input';
-import { useState } from "react";
-import { booksData } from "../data/booksData.js";
+import {useEffect, useState} from "react";
 import styled from "styled-components";
+import getALlBooks from "../Service/bookService";
+import {postFavorite} from "../Service/favoriteService";
 
 const SearchContainer = styled.section`
     width: 100%;
@@ -29,6 +30,10 @@ const ListBooks = styled.div`
     margin: 20px 0;
     cursor: pointer;
     
+    &:hover {
+        transform: scale(1.2);
+    }
+    
     p {
         font-weight: 500;
     }
@@ -41,10 +46,26 @@ const BooksContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
 `;
 
 function Search() {
     const [bookSearch, setBookSearch] = useState([]);
+    const [booksData, setBooksData] = useState([]);
+
+    async function fetchBooks() {
+        const getBooks = await getALlBooks();
+        setBooksData(getBooks);
+    }
+
+    async function insertFavoriteBook(id) {
+        await postFavorite(id);
+        alert("Book added to your list of Favorites!");
+    }
+
+    useEffect(() => {
+        fetchBooks().then();
+    }, []);
 
     return (
         <SearchContainer>
@@ -63,7 +84,7 @@ function Search() {
             <BooksContainer>
                 { bookSearch.map(book =>
                     (
-                        <ListBooks>
+                        <ListBooks onClick={() => insertFavoriteBook(book.id)}>
                             <p>{book.name}</p>
                             <img src={book.src} alt={book.name} />
                         </ListBooks>

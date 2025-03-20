@@ -7,10 +7,10 @@ router.get("/", getBooks);
 
 router.get('/:id', getOneBook);
 
-router.post("/", postBook);
+router.post("/:id", postBook);
 
-router.patch("/", patchBook);
+router.patch("/:id", patchBook);
 
-router.delete("/", deleteBook);
+router.delete("/:id", deleteBook);
 
 module.exports = router;
