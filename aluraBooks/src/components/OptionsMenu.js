@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from "react-router-dom";
 
 const HeaderMenu = styled.ul`
     display: flex;
@@ -24,7 +25,7 @@ function OptionsMenu() {
         <HeaderMenu>
             {
                 menuOptions.map((option) => (
-                    <MenuOptions><p>{option}</p></MenuOptions>
+                    <Link to={`/${option}`}><MenuOptions><p>{option}</p></MenuOptions></Link>
                 ))
             }
         </HeaderMenu>
