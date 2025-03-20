@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import {useEffect, useState} from "react";
-import {deleteFavorite, getAllFavorites} from "../Service/favoriteService";
 import bookCover from "../img/livro.png";
 import Title from "../components/Title";
+import {useEffect, useState} from "react";
+import {deleteFavorite, getAllFavorites} from "../Service/favoriteService";
+import styled from "styled-components";
 
 const AppContainer = styled.div`
     width: 100vw;

@@ -1,1 +1,7 @@
-[{"id":1,"name":"The Way of Kings"},{"id":2,"name":"Words of Radiance"}]
+[
+    {"id":1,"name":"The Way of Kings"},
+    {"id":2,"name":"Words of Radiance"},
+    {"id":3,"name":"OathBringer"},
+    {"id":4,"name":"Rhythm of War"},
+    {"id":5,"name":"Winds and Truth"}
+]

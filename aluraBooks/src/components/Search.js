@@ -1,8 +1,9 @@
 import Input from './Input';
-import {useEffect, useState} from "react";
-import styled from "styled-components";
+import bookCover from '../img/livro.png';
 import getALlBooks from "../Service/bookService";
+import {useEffect, useState} from "react";
 import {postFavorite} from "../Service/favoriteService";
+import styled from "styled-components";
 
 const SearchContainer = styled.section`
     width: 100%;
@@ -86,7 +87,7 @@ function Search() {
                     (
                         <ListBooks onClick={() => insertFavoriteBook(book.id)}>
                             <p>{book.name}</p>
-                            <img src={book.src} alt={book.name} />
+                            <img src={bookCover} alt={book.name} />
                         </ListBooks>
                     )
                 ) }
