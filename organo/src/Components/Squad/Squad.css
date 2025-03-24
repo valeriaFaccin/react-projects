@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap');
+
+.squad-container {
+    text-align: center;
+    padding: 34px;
+}
+
+.squad-container h1 {
+    font-size: 30px;
+    font-family: 'Prata', sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.title-underline {
+    border: 2px solid;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin: 1% 48%;
+}
+
+.employees-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
