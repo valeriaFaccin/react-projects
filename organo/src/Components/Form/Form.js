@@ -4,7 +4,7 @@ import DropdownField from "../DropdownField/DropdownField";
 import Button from "../Button/Button";
 import {useState} from "react";
 
-export const Form = ({registerNewEmployee, squadName}) => {
+export const Form = ({toShow, registerNewEmployee, squadName}) => {
 
     const [name, setName] = useState('');
     const [jobPosition, setJobPosition] = useState('');
@@ -26,7 +26,7 @@ export const Form = ({registerNewEmployee, squadName}) => {
     }
 
     return (
-        <section className={"form-container"}>
+        (toShow) && <section className={"form-container"}>
             <form onSubmit={toSave} className={"form-elements"}>
                 <p>Preencha os dados para criar o Card do colaborador.</p>
                 <Input
