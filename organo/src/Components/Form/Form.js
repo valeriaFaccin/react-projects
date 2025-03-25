@@ -4,7 +4,7 @@ import DropdownField from "../DropdownField/DropdownField";
 import Button from "../Button/Button";
 import {useState} from "react";
 
-export const Form = ({toShow, registerNewEmployee, squadName}) => {
+const Form = ({toShow, registerNewEmployee, squadName}) => {
 
     const [name, setName] = useState('');
     const [jobPosition, setJobPosition] = useState('');
@@ -63,3 +63,5 @@ export const Form = ({toShow, registerNewEmployee, squadName}) => {
         </section>
     );
 }
+
+export default Form;

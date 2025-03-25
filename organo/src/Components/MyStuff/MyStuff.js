@@ -1,8 +1,8 @@
 import "./MyStuff.css";
 import buttonImg from "../../img/addButton.png";
-import {useState} from "react";
-import {Form} from "../Form/Form";
+import Form from "../Form/Form";
 import Squad from "../Squad/Squad";
+import {useState} from "react";
 
 const MyStuff = () => {
 

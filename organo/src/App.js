@@ -1,6 +1,6 @@
 import Banner from "./Components/Banner/Banner"
-import Footer from "./Components/Footer/Footer";
 import MyStuff from "./Components/MyStuff/MyStuff";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
 
