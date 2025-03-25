@@ -3,7 +3,7 @@ import Employee from "../Employee/Employee";
 import hexToRgba from "hex-to-rgba";
 import {useEffect, useState} from "react";
 
-const Squad = ({employees, squad, toDelete, changeColor}) => {
+const Squad = ({ employees, squad, toDelete, changeColor }) => {
 
     const [squadBgColor, setSquadBgColor] = useState(squad.secondaryColor);
 

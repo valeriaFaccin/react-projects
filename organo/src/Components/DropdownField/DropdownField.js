@@ -1,6 +1,6 @@
 import "./dropdownField.css";
 
-const DropdownField = ({isAltered, isRequired, label, value, items}) => {
+const DropdownField = ({ isAltered, isRequired, label, value, items }) => {
     const theresChange = (event) => {
         isAltered(event.target.value);
     }

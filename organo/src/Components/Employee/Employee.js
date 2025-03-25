@@ -1,7 +1,7 @@
 import "./Employee.css";
 import { AiFillCloseCircle } from "react-icons/ai";
 
-const Employee = ({cardBackground, employee, toDelete}) => {
+const Employee = ({ cardBackground, employee, toDelete }) => {
     return (
         <div className={"employee-container"}>
             <AiFillCloseCircle className={"deleteBUTTON-catchTheIRONY"} onClick={toDelete} size={25} color={"#aa0707"} />

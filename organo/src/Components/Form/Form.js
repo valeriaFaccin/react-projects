@@ -4,7 +4,7 @@ import DropdownField from "../DropdownField/DropdownField";
 import Button from "../Button/Button";
 import {useState} from "react";
 
-const Form = ({toShow, registerNewEmployee, squadName}) => {
+const Form = ({ toShow, registerNewEmployee, squadName }) => {
 
     const [name, setName] = useState('');
     const [jobPosition, setJobPosition] = useState('');

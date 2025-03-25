@@ -1,6 +1,6 @@
 import "./Input.css";
 
-const Input = ({isAltered, isRequired, label, value, placeholder}) => {
+const Input = ({ isAltered, isRequired, label, value, placeholder }) => {
     const theresChange = (event) => {
         isAltered(event.target.value);
     }
