@@ -3,6 +3,7 @@
 .squad-container {
     text-align: center;
     padding: 34px;
+    position: relative;
 }
 
 .squad-container h1 {
@@ -23,4 +24,10 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+}
+
+.squad-color-input {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }

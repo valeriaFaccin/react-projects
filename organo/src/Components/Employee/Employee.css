@@ -4,9 +4,16 @@
     font-family: "Montserrat", sans-serif;
     width: 262px;
     border-radius: 10px;
-    background-color: #FFFFFF;
+    background-color: #F0F0F0;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     margin: 30px 0 10px 0;
+    position: relative;
+}
+
+.deleteBUTTON-catchTheIRONY {
+    position: absolute;
+    top: -10px;
+    right: -10px;
 }
 
 .profile-picture {
@@ -25,7 +32,8 @@
 .info-container h4 {
     color: #6278F7;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
+    text-transform: uppercase;
     line-height: 22px;
     margin: 0 0 10px 0;
 }
