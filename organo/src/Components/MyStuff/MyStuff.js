@@ -232,14 +232,18 @@ const MyStuff = () => {
         setEmployees([...employees, newEmployee]);
     }
 
-    const deleteEmployee = () => {
-        console.log('Employee Deleted');
+    const setNewSquad = (newSquad) => {
+        setSquads([...squads, newSquad]);
     }
 
-    const changeSquadColor = (name, color) => {
+    const deleteEmployee = (id) => {
+        setEmployees(employees.filter(employee => employee.id !== id));
+    }
+
+    const changeSquadColor = (id, color) => {
         setSquads(
             squads.map((squad) => {
-                if (squad.name === name) {
+                if (squad.id === id) {
                     squad.primaryColor = color;
                 }
                 return squad;
@@ -253,6 +257,7 @@ const MyStuff = () => {
                 toShow={showForm}
                 squadName={ squads.map(squad => squad.name) }
                 registerNewEmployee={employee => setNewEmployee(employee)}
+                registerNewSquad={squad => setNewSquad(squad)}
             />
 
             <div className={"my-stuff-container"}>

@@ -8,7 +8,7 @@ const Squad = ({ employees, squad, toDelete, changeColor }) => {
     const [squadBgColor, setSquadBgColor] = useState(squad.secondaryColor);
 
     useEffect(() => {
-        setSquadBgColor(hexToRgba(squad.primaryColor, 0.6));
+        setSquadBgColor(hexToRgba(squad.primaryColor, 0.2));
     }, [squad.primaryColor]);
 
     return (
@@ -17,7 +17,7 @@ const Squad = ({ employees, squad, toDelete, changeColor }) => {
                 type={"color"}
                 value={squad.primaryColor}
                 className={"squad-color-input"}
-                onChange={event => changeColor(squad.name, event.target.value)}
+                onChange={event => changeColor(squad.id, event.target.value)}
             />
             <h1>{squad.name}</h1>
             <div className={"title-underline"} style={{ borderColor: squad.primaryColor }}></div>
