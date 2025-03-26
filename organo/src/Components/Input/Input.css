@@ -15,6 +15,11 @@
     font-size: 16px;
 }
 
+.input-container input[type=color] {
+    padding: 8px 24px;
+    height: 50px;
+}
+
 input::placeholder {
     color: #AFAFAF;
     font-family: "Montserrat", sans-serif;

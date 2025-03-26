@@ -25,7 +25,8 @@ const Form = ({ toShow, registerNewEmployee, squadName, registerNewSquad }) => {
             name: employeeName,
             jobPosition: jobPosition,
             imageInput: imageInput,
-            squad: squad
+            squad: squad,
+            favorite: false
         });
         setEmployeeName('');
         setJobPosition('');
@@ -103,13 +104,13 @@ const Form = ({ toShow, registerNewEmployee, squadName, registerNewSquad }) => {
                 />
                 <Input
                     isRequired={true}
+                    type={"color"}
                     label={"Cor"}
-                    placeholder={"Digite a cor padrão em Hexadecimal"}
                     value={primaryColor}
                     isAltered={value => setPrimaryColor(value)}
                 />
                 <Button>
-                    Criar Card
+                    Criar Time
                 </Button>
             </form>}
         </section>
