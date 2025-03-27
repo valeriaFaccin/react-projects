@@ -1,10 +1,13 @@
 import "./Employee.css";
+import {themeContext} from "../MyStuff/MyStuff";
 import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import {useContext} from "react";
 
-const Employee = ({ cardBackground, employee, toDelete, toFavorite }) => {
+const Employee = ({ cardBackground, employee }) => {
+    const {deleteEmployee, setFavoriteEmployee} = useContext(themeContext);
 
     const changeFavorite = () => {
-        toFavorite(employee.id);
+        setFavoriteEmployee(employee.id);
     }
 
     const propsFavorite = {
@@ -13,14 +16,22 @@ const Employee = ({ cardBackground, employee, toDelete, toFavorite }) => {
         onClick: changeFavorite
     }
 
+    const deleteSomeone = () => {
+        deleteEmployee(employee.id);
+    }
+
+    const propsDelete = {
+        size: "25px",
+        cursor: "pointer",
+        color: "#aa0707",
+        onClick: deleteSomeone
+    }
+
     return (
         <div className={"employee-container"}>
             <AiFillCloseCircle
                 className={"deleteBUTTON-catchTheIRONY"}
-                size={25}
-                color={"#aa0707"}
-                cursor={"pointer"}
-                onClick={() => toDelete(employee.id)}
+                {...propsDelete}
             />
             <div style={{backgroundColor: cardBackground, borderRadius: "10px 10px 0 0", height: "90px"}}>
                 <img className={"profile-picture"} src={employee.imageInput} alt={employee.name}/>

@@ -2,8 +2,10 @@ import "./MyStuff.css";
 import buttonImg from "../../img/addButton.png";
 import Form from "../Form/Form";
 import Squad from "../Squad/Squad";
-import {useState} from "react";
+import {createContext, useState} from "react";
 import { v4 as uuidv4 } from 'uuid';
+
+export const themeContext = createContext(null);
 
 const MyStuff = () => {
 
@@ -273,6 +275,10 @@ const MyStuff = () => {
                 return employee;
             })
         );
+
+        const notFav = employees.filter(employee => !employee.favorite);
+        const favs = employees.filter(employee => employee.favorite);
+        setEmployees([...favs, ...notFav]);
     }
 
     const changeSquadColor = (id, color) => {
@@ -308,14 +314,14 @@ const MyStuff = () => {
             </div>
 
             {squads.map((squad) =>
-                <Squad
-                    key={squad.name}
-                    squad={squad}
-                    employees={employees.filter(employee => employee.squad === squad.name)}
-                    toDelete={deleteEmployee}
-                    toFavorite={setFavoriteEmployee}
-                    changeColor={changeSquadColor}
-                />
+                <themeContext.Provider value={{deleteEmployee, setFavoriteEmployee}}>
+                    <Squad
+                        key={squad.name}
+                        squad={squad}
+                        employees={employees.filter(employee => employee.squad === squad.name)}
+                        changeColor={changeSquadColor}
+                    />
+                </themeContext.Provider>
             )}
         </>
     );

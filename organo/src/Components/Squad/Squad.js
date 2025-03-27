@@ -3,7 +3,7 @@ import Employee from "../Employee/Employee";
 import hexToRgba from "hex-to-rgba";
 import {useEffect, useState} from "react";
 
-const Squad = ({ employees, squad, toDelete, toFavorite, changeColor }) => {
+const Squad = ({ employees, squad, changeColor }) => {
 
     const [squadBgColor, setSquadBgColor] = useState(squad.secondaryColor);
 
@@ -27,8 +27,6 @@ const Squad = ({ employees, squad, toDelete, toFavorite, changeColor }) => {
                         key={employee.name}
                         cardBackground={squad.primaryColor}
                         employee={employee}
-                        toDelete={toDelete}
-                        toFavorite={toFavorite}
                     />
                 ))}
             </div>
