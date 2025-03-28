@@ -1,0 +1,106 @@
+.content_container {
+    position: relative;
+    text-align: center;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 0 1.5rem 6.5rem;
+}
+
+.text_404 {
+    display: block;
+    color: var(--light-blue);
+    font-family: var(--secondary-font);
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.paragraph {
+    margin-bottom: 15px;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.btn_container {
+    text-align: start;
+    margin-top: 3.5rem;
+    margin-left: 30vw;
+}
+
+.dog_img {
+    position: absolute;
+    height: 25vw;
+    bottom: calc(-25vw * 0.5);
+    border-radius: 50%;
+}
+
+.blank_space {
+    height: 40vh;
+}
+
+@media (max-width: 1100px) {
+    .text_404 {
+        margin-bottom: 2.25rem;
+    }
+
+    .btn_container {
+        margin-top: 2.75rem;
+        margin-left: 15vw;
+    }
+
+    .dog_img {
+        height: 50vw;
+        bottom: calc(-50vw * 0.65);
+        left: 40vw;
+    }
+
+    .blank_space {
+        height: 53vw;
+    }
+}
+
+@media (max-width: 744px) {
+    .content_container {
+        padding: 3rem 1rem 17rem;
+    }
+
+    .text_404 {
+        font-size: 4rem;
+    }
+
+    .title {
+        font-size: 2.25rem;
+        line-height: 3rem;
+    }
+
+    .paragraph {
+        font-size: 1.125rem;
+        line-height: 1.3125rem;
+    }
+
+    .btn_container {
+        margin: 2.5rem 0 0;
+        text-align: center;
+    }
+
+    .dog_img {
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        height: 94vw;
+        bottom: calc(-94vw * 0.3);
+        max-height: 375px;
+    }
+
+    .blank_space {
+        height: calc(94vw * 0.5);
+    }
+}

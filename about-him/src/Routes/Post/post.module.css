@@ -1,0 +1,73 @@
+.post_markdown_container h3,
+.post_markdown_container h4,
+.post_markdown_container h5,
+.post_markdown_container h6 {
+    font-family: var(--secondary-font);
+}
+
+.post_markdown_container h3 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.post_markdown_container h4 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.post_markdown_container p {
+    text-align: justify;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.post_markdown_container a {
+    color: #0493d4;
+    text-decoration: underline;
+}
+
+.post_markdown_container img {
+    display: block;
+    margin: 0 auto;
+}
+
+.post_markdown_container ul {
+    font-size: 1.5rem;
+}
+
+.post_markdown_container ul > li {
+    margin-bottom: 1rem;
+    list-style: disc;
+}
+
+.post_markdown_container pre,
+.post_markdown_container blockquote {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #eaeaea;
+    border-radius: 5px;
+}
+
+.post_markdown_container pre {
+    overflow-x: auto;
+}
+
+@media (max-width: 1100px) {
+    .post_markdown_container p {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 744px) {
+    .post_markdown_container h3 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .post_markdown_container p {
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+}

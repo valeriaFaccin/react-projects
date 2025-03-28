@@ -1,0 +1,23 @@
+.nav {
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+}
+
+.link {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: var(--font-color);
+}
+
+.link_underline {
+    text-decoration: underline;
+}
+
+@media (max-width: 744px) {
+    .nav {
+        height: 72px;
+    }
+}
