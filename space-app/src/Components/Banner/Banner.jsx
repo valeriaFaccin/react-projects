@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 const BannerContainer = styled.div`
-    background-image: ${props => `url(${props.$image}`};
+    background-image: ${props => `url(${props.$image})`};
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     border-radius: 20px;
     max-height: 330px;
-    display: flex;
-    flex-grow: 1;
     margin: 0;
 `;
 
