@@ -7,6 +7,7 @@ import bannerImage from "./assets/banner.png";
 import Gallery from "./Components/Gallery/Gallery.jsx";
 import pictures from "./fotos.json";
 import {useState} from "react";
+import ModalPicture from "./Components/ModalPicture/ModalPicture.jsx";
 
 const GradientBackground = styled.div`
     background: linear-gradient(174.61deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -44,6 +45,7 @@ const App = () => {
                     <GalleryContainer>
                         <Banner image={bannerImage} text={"A galeria mais completa de fotos do espaço!"} />
                         <Gallery pictures={picture} />
+                        <ModalPicture />
                     </GalleryContainer>
                 </MainContainer>
             </AppContainer>

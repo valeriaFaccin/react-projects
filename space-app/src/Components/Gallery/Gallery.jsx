@@ -15,6 +15,7 @@ const GalleryNavigation = styled.div`
 const PicturesContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     gap: 1.5rem;
 `;
 
@@ -34,4 +35,5 @@ const Gallery = ({ pictures }) => {
         </>
     );
 }
+
 export default Gallery;
