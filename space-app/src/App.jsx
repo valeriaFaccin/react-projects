@@ -34,6 +34,7 @@ const GalleryContainer = styled.section`
 
 const App = () => {
     const [picture, setPicture] = useState(pictures);
+    const [selectedPicture, setSelectedPicture] = useState(null);
 
     return (
         <GradientBackground>
@@ -44,11 +45,11 @@ const App = () => {
                     <AsideMenu />
                     <GalleryContainer>
                         <Banner image={bannerImage} text={"A galeria mais completa de fotos do espaço!"} />
-                        <Gallery pictures={picture} />
-                        <ModalPicture />
+                        <Gallery onSelectedPicture={picture => setSelectedPicture(picture)} pictures={picture} />
                     </GalleryContainer>
                 </MainContainer>
             </AppContainer>
+            <ModalPicture picture={selectedPicture} />
         </GradientBackground>
     );
 }

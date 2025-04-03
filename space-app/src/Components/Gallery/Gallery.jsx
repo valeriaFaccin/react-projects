@@ -19,7 +19,7 @@ const PicturesContainer = styled.div`
     gap: 1.5rem;
 `;
 
-const Gallery = ({ pictures }) => {
+const Gallery = ({ pictures = [], onSelectedPicture }) => {
     return (
         <>
             <Tags />
@@ -27,7 +27,7 @@ const Gallery = ({ pictures }) => {
                 <GalleryNavigation>
                     <Title>Navegue pela galeria</Title>
                     <PicturesContainer>
-                        {pictures.map(picture => (<Pictures picture={picture} />))}
+                        {pictures.map(picture => (<Pictures picture={picture} onZoomPicture={onSelectedPicture} />))}
                     </PicturesContainer>
                 </GalleryNavigation>
                 <Popular />

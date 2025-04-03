@@ -59,7 +59,7 @@ const Figure = styled.figure`
     }
 `;
 
-const Pictures = ({ picture }) => {
+const Pictures = ({ picture, isExpanded = false, onZoomPicture }) => {
     return (
         <Figure>
             <img src={picture.path} alt={picture.titulo}/>
@@ -67,8 +67,14 @@ const Pictures = ({ picture }) => {
                 <h3>{picture.titulo}</h3>
                 <CaptionContainer>
                     <h4>{picture.fonte}</h4>
-                    <ButtonIcon><img src={favorite} alt={"Favorite Icon"}/></ButtonIcon>
-                    <ButtonIcon><img src={expand} alt={"Expand icon"}/></ButtonIcon>
+                    <ButtonIcon>
+                        <img src={favorite} alt={"Favorite Icon"}/>
+                    </ButtonIcon>
+                    {(!isExpanded &&
+                        <ButtonIcon aria-hidden={isExpanded} onClick={() => onZoomPicture(picture)}>
+                            <img src={expand} alt={"Expand icon"}/>
+                        </ButtonIcon>
+                    )}
                 </CaptionContainer>
             </figcaption>
         </Figure>
