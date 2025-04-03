@@ -1,4 +1,5 @@
 import favorite from "/icones/favorito.png";
+import filledfavorite from "/icones/favorito-ativo.png";
 import expand from "/icones/expandir.png";
 import styled from "styled-components";
 
@@ -59,7 +60,9 @@ const Figure = styled.figure`
     }
 `;
 
-const Pictures = ({ picture, isExpanded = false, onZoomPicture }) => {
+const Pictures = ({ picture, isExpanded = false, onZoomPicture, onToggleFavorite }) => {
+    const favoriteIcon = picture.favorite ? filledfavorite : favorite;
+
     return (
         <Figure>
             <img src={picture.path} alt={picture.titulo}/>
@@ -67,8 +70,8 @@ const Pictures = ({ picture, isExpanded = false, onZoomPicture }) => {
                 <h3>{picture.titulo}</h3>
                 <CaptionContainer>
                     <h4>{picture.fonte}</h4>
-                    <ButtonIcon>
-                        <img src={favorite} alt={"Favorite Icon"}/>
+                    <ButtonIcon onClick={() => onToggleFavorite(picture)}>
+                        <img src={favoriteIcon} alt={"Favorite Icon"}/>
                     </ButtonIcon>
                     {(!isExpanded &&
                         <ButtonIcon aria-hidden={isExpanded} onClick={() => onZoomPicture(picture)}>

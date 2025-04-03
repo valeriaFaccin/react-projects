@@ -8,6 +8,7 @@ import Gallery from "./Components/Gallery/Gallery.jsx";
 import pictures from "./fotos.json";
 import {useState} from "react";
 import ModalPicture from "./Components/ModalPicture/ModalPicture.jsx";
+import favorite from "/icones/favorito.png";
 
 const GradientBackground = styled.div`
     background: linear-gradient(174.61deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -36,6 +37,15 @@ const App = () => {
     const [picture, setPicture] = useState(pictures);
     const [selectedPicture, setSelectedPicture] = useState(null);
 
+    const onToggleFavorite = (selectedPic) => {
+        setPicture(picture.map(pic => {
+            return {
+                ...pic,
+                favorite: pic.id === selectedPic.id ? !selectedPic.favorite : pic.favorite
+            }
+        }));
+    }
+
     return (
         <GradientBackground>
             <GlobalStyles />
@@ -45,7 +55,7 @@ const App = () => {
                     <AsideMenu />
                     <GalleryContainer>
                         <Banner image={bannerImage} text={"A galeria mais completa de fotos do espaço!"} />
-                        <Gallery onSelectedPicture={picture => setSelectedPicture(picture)} pictures={picture} />
+                        <Gallery onSelectedPicture={picture => setSelectedPicture(picture)} onToggleFavorite={onToggleFavorite} pictures={picture} />
                     </GalleryContainer>
                 </MainContainer>
             </AppContainer>
