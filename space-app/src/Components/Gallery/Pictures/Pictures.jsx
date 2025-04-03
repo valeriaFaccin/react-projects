@@ -23,7 +23,7 @@ const ButtonIcon = styled.button`
 `;
 
 const Figure = styled.figure`
-    width: ${(props) => (props.$expandida ? '90%' : '460px')};
+    width: ${props => (props.$isExpanded ? '100%' : '460px')};
     max-width: 100%;
     margin: 0;
     display: flex;

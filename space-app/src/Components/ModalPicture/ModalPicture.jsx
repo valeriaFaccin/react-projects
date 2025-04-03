@@ -1,5 +1,6 @@
 import Pictures from "../Gallery/Pictures/Pictures.jsx";
 import styled from "styled-components";
+import closeIcon from "/icones/fechar.png";
 
 const Overlay = styled.div`
     background-color: rgba(0, 0, 0, 0.7);
@@ -13,18 +14,37 @@ const Overlay = styled.div`
 const DialogContainer = styled.dialog`
     position: absolute;
     top: 294px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    width: 1156px;
+    display: flex;
+    justify-content: center;
+    
+    form {
+        button {
+            position: relative;
+            top: 20px;
+            right: 60px;
+            border: none;
+            background-color: transparent;
+        }
+    }
 `;
 
-const ModalPicture = ({ picture }) => {
+const ModalPicture = ({picture}) => {
     return (
         <>
             {picture &&
                 <>
-                    <Overlay />
+                    <Overlay/>
                     <DialogContainer open={!!picture}>
                         <Pictures picture={picture} isExpanded={true}/>
+
                         <form method="dialog">
-                            <button type="submit">ok</button>
+                            <button type="submit">
+                                <img src={closeIcon} alt={"Close Icon"} />
+                            </button>
                         </form>
                     </DialogContainer>
                 </>
