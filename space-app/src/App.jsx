@@ -6,9 +6,9 @@ import Banner from "./Components/Banner/Banner.jsx";
 import bannerImage from "./assets/banner.png";
 import Gallery from "./Components/Gallery/Gallery.jsx";
 import pictures from "./fotos.json";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import ModalPicture from "./Components/ModalPicture/ModalPicture.jsx";
-import favorite from "/icones/favorito.png";
+import Footer from "./Components/Footer/Footer.jsx";
 
 const GradientBackground = styled.div`
     background: linear-gradient(174.61deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -37,7 +37,22 @@ const App = () => {
     const [picture, setPicture] = useState(pictures);
     const [selectedPicture, setSelectedPicture] = useState(null);
 
+    useEffect(() => {
+        setPicture(pictures.filter(pic => {
+            return {}
+        }))
+    }, []);
+
     const onToggleFavorite = (selectedPic) => {
+        if(selectedPic.id === selectedPicture?.id) {
+            setSelectedPicture(selectedPicture.map(pic => {
+                return {
+                    ...pic,
+                    favorite: !selectedPicture.favorite
+                }
+            }));
+        }
+
         setPicture(picture.map(pic => {
             return {
                 ...pic,
@@ -59,7 +74,8 @@ const App = () => {
                     </GalleryContainer>
                 </MainContainer>
             </AppContainer>
-            <ModalPicture picture={selectedPicture} />
+            <Footer />
+            <ModalPicture picture={selectedPicture} onToggleFavorite={onToggleFavorite} />
         </GradientBackground>
     );
 }

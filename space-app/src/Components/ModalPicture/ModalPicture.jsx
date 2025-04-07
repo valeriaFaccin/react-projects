@@ -32,14 +32,14 @@ const DialogContainer = styled.dialog`
     }
 `;
 
-const ModalPicture = ({picture}) => {
+const ModalPicture = ({ picture, onToggleFavorite }) => {
     return (
         <>
             {picture &&
                 <>
                     <Overlay/>
                     <DialogContainer open={!!picture}>
-                        <Pictures picture={picture} isExpanded={true}/>
+                        <Pictures picture={picture} isExpanded={true} onToggleFavorite={onToggleFavorite} />
 
                         <form method="dialog">
                             <button type="submit">

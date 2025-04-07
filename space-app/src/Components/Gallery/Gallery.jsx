@@ -27,7 +27,12 @@ const Gallery = ({ pictures = [], onSelectedPicture, onToggleFavorite }) => {
                 <GalleryNavigation>
                     <Title>Navegue pela galeria</Title>
                     <PicturesContainer>
-                        {pictures.map(picture => (<Pictures picture={picture} onZoomPicture={onSelectedPicture} onToggleFavorite={onToggleFavorite} />))}
+                        {pictures.map(picture => (
+                            <Pictures
+                                picture={picture} onZoomPicture={onSelectedPicture}
+                                onToggleFavorite={onToggleFavorite}
+                            />
+                        ))}
                     </PicturesContainer>
                 </GalleryNavigation>
                 <Popular />
