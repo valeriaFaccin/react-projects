@@ -37,12 +37,6 @@ const App = () => {
     const [picture, setPicture] = useState(pictures);
     const [selectedPicture, setSelectedPicture] = useState(null);
 
-    useEffect(() => {
-        setPicture(pictures.filter(pic => {
-            return {}
-        }))
-    }, []);
-
     const onToggleFavorite = (selectedPic) => {
         if(selectedPic.id === selectedPicture?.id) {
             setSelectedPicture(selectedPicture.map(pic => {
