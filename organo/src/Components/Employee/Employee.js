@@ -36,7 +36,7 @@ const Employee = ({ cardBackground, employee }) => {
             <div style={{backgroundColor: cardBackground, borderRadius: "10px 10px 0 0", height: "90px"}}>
                 <img className={"profile-picture"} src={employee.imageInput} alt={employee.name}/>
                 <div className={"favorite-container"}>
-                    {(employee.favorite) ? <AiFillHeart {...propsFavorite} color={"#FFD700"}/> :
+                    {(employee.favorite) ? <AiFillHeart {...propsFavorite} color={"#ebcc00"}/> :
                         <AiOutlineHeart {...propsFavorite} />}
                 </div>
             </div>
