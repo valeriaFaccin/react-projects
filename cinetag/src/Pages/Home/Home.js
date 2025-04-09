@@ -1,8 +1,8 @@
 import styles from "./Home.module.css";
+import movies from "../../json/db.json";
 import Banner from "../../Components/Banner/Banner";
 import Title from "../../Components/Title/Title";
 import Card from "../../Components/Card/Card";
-import movies from "../../json/db.json";
 
 const Home = () => {
     return (
