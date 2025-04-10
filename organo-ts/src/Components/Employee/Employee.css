@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap');
+
+.employee-container {
+    font-family: "Montserrat", sans-serif;
+    width: 262px;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 30px 0 10px 0;
+    position: relative;
+}
+
+.deleteBUTTON-catchTheIRONY {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    bottom: -50px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.info-container {
+    padding: 90px 30px 30px 30px;
+}
+
+.info-container h4 {
+    color: #6278F7;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 22px;
+    margin: 0 0 10px 0;
+}
+
+.info-container h6 {
+    color: #212121;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0;
+}
+
+.favorite-container {
+    position: relative;
+    left: 45px;
+    top: 15px;
+}

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap');
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.tab-container button {
+    width: 45%;
+    background-color: #F2F2F2;
+    color: #212121;
+    border: none;
+    border-radius: 20px 0 0 0;
+    padding: 16px 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tab-container button:hover {
+    background-color:  #95FFD4;
+}
+
+.tab-container button:focus {
+    border-bottom: 4px solid #6278F7;
+    border-left: 4px solid #6278F7;
+}
+
+.form-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 70%;
+    background-color: #F6F6F6;
+    font-family: "Montserrat", sans-serif;
+    padding: 32px 64px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px rgb(0, 0, 0, 0.08);
+}
+
+.form-elements p {
+    font-size: 32px;
+    color: #212121;
+    font-family: "Prata", sans-serif;
+}

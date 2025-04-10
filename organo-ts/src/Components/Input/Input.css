@@ -1,0 +1,26 @@
+.input-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.input-container input {
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+}
+
+.input-container input[type=color] {
+    padding: 8px 24px;
+    height: 50px;
+}
+
+input::placeholder {
+    color: #AFAFAF;
+    font-family: "Montserrat", sans-serif;
+}

@@ -1,0 +1,40 @@
+.my-stuff-container {
+    display: grid;
+    grid-template-columns: 30% 40% 20%;
+    padding: 80px 0;
+}
+
+.stuff-info {
+    grid-column: 2/3;
+    grid-row: 1;
+    align-self: center;
+}
+
+.stuff-btn {
+    grid-column: 3/3;
+    grid-row: 1;
+    place-self: end;
+}
+
+.my-stuff-container h1 {
+    color: #6278F7;
+    font-size: 40px;
+    font-family: "Prata", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+}
+
+.underline {
+    border: 2px solid #6278F7;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin: 1% 45%;
+}
+
+.button-form {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}

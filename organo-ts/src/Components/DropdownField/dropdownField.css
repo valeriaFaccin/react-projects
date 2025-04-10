@@ -1,0 +1,23 @@
+.dropdown-container {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.dropdown-container label {
+    margin-bottom: 8px;
+}
+
+.dropdown-container select {
+    background-color: #FFFFFF;
+    color: #AFAFAF;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
