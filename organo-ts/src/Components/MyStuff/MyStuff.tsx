@@ -294,8 +294,6 @@ const MyStuff = () => {
         );
     }
 
-    // @ts-ignore
-    // @ts-ignore
     return (
         <>
             <Form

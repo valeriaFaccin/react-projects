@@ -4,7 +4,7 @@ import React from "react";
 interface inputProps {
     isAltered: (value: string) => void,
     isRequired: boolean,
-    type?: string,
+    type?: 'text' | 'color',
     label: string,
     value: string,
     placeholder?: string
