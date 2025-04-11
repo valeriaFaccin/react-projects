@@ -5,12 +5,12 @@ import HeaderLink from "../HeaderLink/HeaderLink";
 const Header = () => {
     return (
         <header className={styles.header}>
-            <Link to="">
+            <Link to="/">
                 <img src={`/img/logo.png`} alt="CineTag Logo"></img>
             </Link>
             <nav>
-                <HeaderLink url="./">Home</HeaderLink>
-                <HeaderLink url="./Favoritos">Favoritos</HeaderLink>
+                <HeaderLink url="/">Home</HeaderLink>
+                <HeaderLink url="/Favoritos">Favorites</HeaderLink>
             </nav>
         </header>
     )
